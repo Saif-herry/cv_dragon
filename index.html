@@ -2,280 +2,747 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/724ae640f4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css" />
-    <title>Mohammad Saif CV</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/724ae640f4.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="./index.css" /> -->
+  <title>Mohammad Saif CV</title>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      font-family: "Nunito", sans-serif;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .CvMainContainer {
+      width: 100%;
+      background-color: #262626;
+    }
+
+    .CvContainer {
+      max-width: 55%;
+
+      height: 174vh;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      margin: auto;
+    }
+
+    .CvInfoContainer {
+      display: grid;
+      grid-template-columns: 75% 25%;
+      height: 27vh;
+
+      background-color: #2f3a4d;
+      align-items: center;
+    }
+
+    .cvPic img {
+      border-radius: 50%;
+      border: 4px solid skyblue;
+      margin-left: 45px;
+      width: 120px;
+    }
+
+    .cvinfo {
+      margin-left: 35px;
+    }
+
+    .Name {
+      font-size: 37px;
+      font-weight: 500;
+      color: #e2e3e6;
+    }
+
+    .Pro {
+      font-size: 20px;
+      color: #428f96;
+    }
+
+    .infoPara {
+      width: 97%;
+      line-height: 20px;
+      color: #e2e3e6;
+      word-spacing: 2px;
+      padding-top: 10px;
+      font-size: 12px;
+    }
+
+    /* /////////////////////1st div  end////////////////////////////// */
+
+    .contactInfoContainer {
+      height: 20vh;
+      background-color: #202933;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+
+
+    }
+
+    .contactInfoContainer div {
+      margin-left: 11px;
+      margin-top: 6px;
+    }
+
+    .IconInfo {
+      display: flex;
+      /* gap: 10px; */
+
+    }
+
+    .icon i {
+      /* font-size: 22px; */
+      color: #e2e3e6;
+
+    }
+
+
+    .Icondetails {
+      color: #e2e3e6;
+      font-size: 12px;
+    }
+
+    .contactInforightSide div {
+      /* margin-left: -10px; */
+      /* border: 1px solid red; */
+    }
+
+    /* <!-- //////////////////////2nd div complete///////////////////////////////// --> */
+
+
+    .AllInfoContainer {
+      background-color: #f7f7fa;
+      height: 126vh;
+      display: grid;
+      grid-template-columns: 58% 42%;
+    }
+
+    .allInfoLeftSide {
+      /* border: 1px solid green; */
+    }
+
+    .AllInfoRightSide {
+      /* border: 1px solid pink; */
+    }
+
+    /* //////////Education//////////////////// */
+
+    .Education {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      /* border: 1px solid green; */
+    }
+
+    .AllinfoleftContainer {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .educationHead h1 {
+      font-size: 20px;
+      color: #559ca3;
+      text-decoration: 2px solid underline;
+      text-decoration-color: #559ca3;
+
+    }
+
+    .Course {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+    }
+
+    .Course h2 {
+      font-size: 17px;
+    }
+
+    .school {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .date {
+      font-size: 12px;
+    }
+
+
+    /* /////////////////Project///////////////////////////// */
+
+    fa-brands fa-github {
+      height: 10px;
+      width: 10px;
+    }
+
+    .ProjectContainer {
+      margin-top: 30px;
+    }
+
+    .ProjectAllContainer {
+      margin-top: 18px;
+      /* border: 1px solid red; */
+    }
+
+    .SingleProjectContainer {
+      margin-top: 10px;
+      /* border: 1px solid yellow; */
+    }
+
+    .ProjectHead {
+      display: flex;
+      gap: 4px;
+    }
+
+    .ProjectHead p {
+      font-weight: bold;
+      font-size: 14px;
+      font-weight: 500;
+      ;
+    }
+
+    .ProjectInfoList {
+      margin-left: 20px;
+    }
+
+    ul {
+      font-size: 12px;
+    }
+
+    ul li {
+      /* margin-top: 5px; */
+      list-style: none;
+    }
+
+    li ul {
+      margin-left: 20px;
+    }
+
+    .ful {
+      line-height: 16px;
+    }
+
+
+    .ful .fli::before {
+      content: "\2022";
+      color: #559ca3;
+      font-weight: bold;
+      font-size: 18px;
+      display: inline-block;
+      width: 1em;
+      /* margin-top: 1px; */
+      margin-left: -0.7em;
+
+    }
+
+    .sul>li::before {
+      content: "\2022";
+      color: #000;
+      font-weight: bold;
+      font-size: 15px;
+     
+      display: inline-block;
+      width: 1em;
+      margin-left: -0.7em;
+
+    }
+
+
+    /* ////////////////right side///////////////////// */
+    /* //////////TechSkills/////////////////// */
+    .AllInfoRightSide {
+      /* border: 1px solid red; */
+    }
+
+    .TechSkills {
+      margin-top: 15px;
+      /* border: 1px solid red; */
+      margin-right: 20px;
+
+    }
+
+    .TechSkillsData {
+      margin-top: 20px;
+    }
+
+    .frow {
+      display: flex;
+      margin-top: 10px;
+      font-size: 12px;
+
+    }
+
+    .frow div {
+      margin-left: 10px;
+      background-color: #8d949c;
+      color: #fff;
+      padding: 7px;
+      border-radius: 4px;
+    }
+
+
+    /* //////////////softSkills////////////////////////// */
+
+
+    .softSkills {
+      margin-top: 30px;
+      /* border: 1px solid red; */
+    }
+
+    .softSkillsData {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    /* ////////////softSkills end///////////////////// */
+
+    .CERTIFICATIN {
+      margin-top: 30px;
+      /* border: 1px solid red; */
+    }
+
+    .CERTIFICATINDATA {
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+
+    /* ///////////////CERTIFICATIon end/////////////// */
+
+
+    .Langauge {
+      margin-top: 30px;
+      /* border: 1px solid red; */
+    }
+
+    .LangaugeData {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 18px;
+      line-height: 13px;
+    }
+
+    .LangaugeName p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .LangaugeName i {
+      color: #559ca3;
+      font-size: 10px;
+    }
+
+    /* /////////////////Langauge end////////////////////// */
+
+
+    .interest {
+      margin-top: 30px;
+      /* border: 1px solid red; */
+    }
+
+    .educationHead {
+      /* margin-top: 30px; */
+    }
+
+    .interestData {
+      margin-top: 10px;
+    }
+
+
+    .interstInfo {
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .interstInfo div {
+      border: 1px solid gray;
+      padding: 4px;
+      border-radius: 3px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="CvMainContainer">
-        <div class="CvContainer">
-            <!-- 1st div -->
-            <div class="CvInfoContainer">
-                <div class="cvinfo">
-                    <div class="infoName">
-                        <p class="Name">Mohammad Saif</p>
-                        <p class="Pro">Full-Stack Web Developer</p>
-                    </div>
-                    <div class="infoPara">
-                        <p>
-                            Result-oriented Full-Stack Web Developer. Self-motivated and
-                            curious, passionate about developing user- friendly web
-                            applications with the ability to write clean, reusable and
-                            optimized code. Have problem-solving skills and the ability to
-                            perform well in a team & challenging work environment. alongside
-                            learning and growing with the Organization.
-                        </p>
-                    </div>
-                </div>
-                <div class="cvPic">
-                    <img src="https://avatars.githubusercontent.com/u/98679704?s=100&v=4" alt="avatar" />
-                </div>
+  <div class="CvMainContainer">
+    <div class="CvContainer">
+      <!-- 1st div -->
+      <div class="CvInfoContainer">
+        <div class="cvinfo">
+          <div class="infoName">
+            <p class="Name">Mohammad Saif</p>
+            <p class="Pro">Full-Stack Web Developer</p>
+          </div>
+          <div class="infoPara">
+            <p>
+              Result-oriented Full-Stack Web Developer. Self-motivated and
+              curious, passionate about developing user- friendly web
+              applications with the ability to write clean, reusable and
+              optimized code. Have problem-solving skills and the ability to
+              perform well in a team & challenging work environment. alongside
+              learning and growing with the Organization.
+            </p>
+          </div>
+        </div>
+        <div class="cvPic">
+          <img src="https://avatars.githubusercontent.com/u/98679704?s=100&v=4" alt="avatar" />
+        </div>
+      </div>
+
+      <!-- 1st div end////////////////////////////////////////////////////////////////////////////////// -->
+
+      <div class="contactInfoContainer">
+        <div class="contactInfoleftSide">
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-solid fa-envelope"></i>
             </div>
-
-            <!-- 1st div end////////////////////////////////////////////////////////////////////////////////// -->
-
-            <div class="contactInfoContainer">
-                <div class="contactInfoleftSide">
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>saifsami321md@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>Kanke , Ranchi, Jharkhand, Ranchi, India</p>
-                        </div>
-                    </div>
-
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>@Saif8496</p>
-                        </div>
-                    </div>
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-brands fa-medium"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>medium.com/@saifsami321md</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contactInforightSide">
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>8434917976</p>
-                        </div>
-                    </div>
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>linkedin.com/in/mohammad-saif123</p>
-                        </div>
-                    </div>
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                        <div class="Icondetails">
-                            <p>github.com/Saif-herry</p>
-                        </div>
-                    </div>
-                    <div class="IconInfo">
-                        <div class="icon">
-                            <!-- <i class="fa-brands fa-github"></i> -->
-                        </div>
-                        <div class="Icondetails">
-                            <!-- <p>github.com/Saif-herry</p> -->
-                        </div>
-                    </div>
-                </div>
+            <div class="Icondetails">
+              <p>saifsami321md@gmail.com</p>
             </div>
-            <!-- //////////////////////2nd div complete///////////////////////////////// -->
-            <div class="AllInfoContainer">
-                <div class="allInfoLeftSide">
-                    <div class="AllinfoleftContainer">
-                        <!-- ////////////Education/////////////////// -->
-                        <div class="Education">
-                            <div class="educationHead">
-                                <h1>EDUCATION</h1>
-                            </div>
-                            <div class="Course">
-                                <h2>Full-stack Web Development</h2>
-                                <h5 class="school">Masai School, Bangalore</h5>
-                                <p class="date">16 Nov 2021- 19 Nov 2022</p>
-                            </div>
-                            <div class="Course">
-                                <h2>BCA</h2>
-                                <h5 class="school">Ignou Regional Center-Ranchi, Jharkhand</h5>
-                                <p class="date">April 2016 – June 2021</p>
-                            </div>
-                            <div class="Course">
-                                <h2>Class 12 (Science)</h2>
-                                <h5 class="school">Marwari College Ranchi, Jharkhand</h5>
-                                <p class="date">April 2013 – April 2015</p>
-                            </div>
-                        </div>
-                        <!-- /////////////////////Education////////////////////////////////////////////// -->
+          </div>
 
-                        <!-- /////////////////////Projects////////////////////////////////////////////// -->
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="Icondetails">
+              <p>Kanke , Ranchi, Jharkhand, Ranchi, India</p>
+            </div>
+          </div>
 
-                        <div class="ProjectContainer">
-                            <div class="educationHead">
-                                <h1>PROJECTS</h1>
-                            </div>
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="Icondetails">
+              <p>@Saif8496</p>
+            </div>
+          </div>
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-brands fa-medium"></i>
+            </div>
+            <div class="Icondetails">
+              <p>medium.com/@saifsami321md</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactInforightSide">
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="Icondetails">
+              <p>8434917976</p>
+            </div>
+          </div>
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="Icondetails">
+              <p>linkedin.com/in/mohammad-saif123</p>
+            </div>
+          </div>
+          <div class="IconInfo">
+            <div class="icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="Icondetails">
+              <p>github.com/Saif-herry</p>
+            </div>
+          </div>
+          <div class="IconInfo">
+            <div class="icon">
+              <!-- <i class="fa-brands fa-github"></i> -->
+            </div>
+            <div class="Icondetails">
+              <!-- <p>github.com/Saif-herry</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //////////////////////2nd div complete///////////////////////////////// -->
+      <div class="AllInfoContainer">
+        <div class="allInfoLeftSide">
+          <div class="AllinfoleftContainer">
+            <!-- ////////////Education/////////////////// -->
+            <div class="Education">
+              <div class="educationHead">
+                <h1>EDUCATION</h1>
+              </div>
+              <div class="Course">
+                <h2>Full-stack Web Development</h2>
+                <h5 class="school">Masai School, Bangalore</h5>
+                <p class="date">16 Nov 2021- 19 Nov 2022</p>
+              </div>
+              <div class="Course">
+                <h2>BCA</h2>
+                <h5 class="school">Ignou Regional Center-Ranchi, Jharkhand</h5>
+                <p class="date">April 2016 – June 2021</p>
+              </div>
+              <div class="Course">
+                <h2>Class 12 (Science)</h2>
+                <h5 class="school">Marwari College Ranchi, Jharkhand</h5>
+                <p class="date">April 2013 – April 2015</p>
+              </div>
+            </div>
+            <!-- /////////////////////Education////////////////////////////////////////////// -->
 
-                            <div class="ProjectAllContainer">
-                                <div class="SingleProjectContainer">
-                                    <div class="ProjectHead">
-                                        <p>
-                                            <span style="text-decoration: 1px solid underline">hellobonsai-clone</span>
-                                            <span>(09/2022 - 09/2022)</span>
-                                        </p>
-                                        <i style="
+            <!-- /////////////////////Projects////////////////////////////////////////////// -->
+
+            <div class="ProjectContainer">
+              <div class="educationHead">
+                <h1>PROJECTS</h1>
+              </div>
+
+              <div class="ProjectAllContainer">
+                <div class="SingleProjectContainer">
+                  <div class="ProjectHead">
+                    <p>
+                      <a style="color:black" target="_blank" href="https://animated-cajeta-71df8f.netlify.app/"><span
+                          style="text-decoration: 1px solid underline">hellobonsai-clone</span></a>
+                      <span>(09/2022 - 09/2022)</span>
+                    </p>
+                    <a style="color:black" target="_blank" href="https://github.com/Saif-herry/productive-frog-3801"> <i style="
                           text-decoration: 2px solid underline;
                           text-decoration-color: #559ca3;
-                        " class="fa-brands fa-github"></i>
-                                    </div>
-                                    <div class="ProjectInfoList">
-                                        <ul class="ful">
-                                            <li class="fli" style="width: 90%">
-                                                Basically, hellobonsai.com is a Freelance website.
-                                                Where you can add your clients, pitch clients also you
-                                                can quotes a projects send proposal, send/sign
-                                                contracts, Handoff and get Paid.
-                                            </li>
-                                            <li class="fli">
-                                                Areas of responsibility:
-                                                <ul class="sul">
-                                                    <li>Pricing Page with FAQ and Footer</li>
-                                                    <li>Cash Page along with it's Footer</li>
-                                                    <li>Review Page</li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                Tech Stack:
-                                                <ul class="sul">
-                                                    <li>
-                                                        React | Redux | MongoDB |Express | Chakra UI| node
-                                                        js
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                A collaborative project built by team of 5 in 5 days.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="SingleProjectContainer">
-                                    <div class="ProjectHead">
-                                        <p>
-                                            <span style="text-decoration: 1px solid underline">Bigbasket-clone</span>
-                                            <span>(05/2022 - 05/2022)</span>
-                                        </p>
-                                        <i style="
-                          text-decoration: 2px solid underline;
-                          text-decoration-color: #559ca3;
-                        " class="fa-brands fa-github"></i>
-                                    </div>
-                                    <div class="ProjectInfoList">
-                                        <ul class="ful">
-                                            <li class="fli" style="width: 90%">
-                                                Bigbasket.com is synonymous with superior quality and
-                                                continues to strive for higher levels of customer
-                                                trust and confidence, by taking feedback and giving
-                                                our customers what they want.
-                                            </li>
-                                            <li class="fli">
-                                                Areas of responsibility:
-                                                <ul class="sul">
-                                                    <li>To build Product Page</li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                Tech Stack:
-                                                <ul class="sul">
-                                                    <li>React.js | Redux | ES6 | CSS | Bootstrap</li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                A collaborative project built by a team of 6 executed
-                                                in 5 days.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="SingleProjectContainer">
-                                    <div class="ProjectHead">
-                                        <p>
-                                            <span style="text-decoration: 1px solid underline">Beminimalist-clone</span>
-                                            <span>(03/2022 - 02/2022)</span>
-                                        </p>
-                                        <i style="
-                          text-decoration: 2px solid underline;
-                          text-decoration-color: #559ca3;
-                        " class="fa-brands fa-github"></i>
-                                    </div>
-                                    <div class="ProjectInfoList">
-                                        <ul class="ful">
-                                            <li class="fli">
-                                                An e-commerce website that provide Skin care products.
-                                            </li>
-                                            <li class="fli">
-                                                Areas of responsibility:
-                                                <ul class="sul">
-                                                    <li>Header and Footer</li>
-                                                    <li>complete Readme part of GitHub</li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                Tech Stack:
-                                                <ul class="sul">
-                                                    <li>HTML | CSS | Advance JavaScript</li>
-                                                </ul>
-                                            </li>
-                                            <li class="fli">
-                                                A collaborative project built by team of 6 in 4 days.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ////////////////////////////////////// -->
-                    </div>
+                          font-size: 12px;
+                          
+                        " class="fa-brands fa-github"></i></a>
+                  </div>
+                  <div class="ProjectInfoList">
+                    <ul class="ful">
+                      <li class="fli" style="width: 90%">
+                        Basically, hellobonsai.com is a Freelance website.
+                        Where you can add your clients, pitch clients also you
+                        can quotes a projects send proposal, send/sign
+                        contracts, Handoff and get Paid.
+                      </li>
+                      <li class="fli">
+                        Areas of responsibility:
+                        <ul class="sul">
+                          <li>Pricing Page with FAQ and Footer</li>
+                          <li>Cash Page along with it's Footer</li>
+                          <li>Review Page</li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        Tech Stack:
+                        <ul class="sul">
+                          <li>
+                            React | Redux | MongoDB |Express | Chakra UI| node
+                            js
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        A collaborative project built by team of 5 in 5 days.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- //////////////////////////////// -->
 
+                <div class="SingleProjectContainer">
+                  <div class="ProjectHead">
+                    <p>
+                      <a style="color:black" target="_blank" href="https://big-basket-cloned-by-masai-school.netlify.app/"><span
+                          style="text-decoration: 1px solid underline">Bigbasket-clone</span></a>
+                      <span>(05/2022 - 05/2022)</span>
+                    </p>
+                    <a style="color:black" target="_blank" href="https://github.com/Saif-herry/Big-basket-clone"><i style="
+                          text-decoration: 2px solid underline;
+                          text-decoration-color: #559ca3;
+                          font-size: 12px;
+                        " class="fa-brands fa-github"></i></a>
+                  </div>
+                  <div class="ProjectInfoList">
+                    <ul class="ful">
+                      <li class="fli" style="width: 90%">
+                        Bigbasket.com is synonymous with superior quality and
+                        continues to strive for higher levels of customer
+                        trust and confidence, by taking feedback and giving
+                        our customers what they want.
+                      </li>
+                      <li class="fli">
+                        Areas of responsibility:
+                        <ul class="sul">
+                          <li>To build Product Page</li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        Tech Stack:
+                        <ul class="sul">
+                          <li>React.js | Redux | ES6 | CSS | Bootstrap</li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        A collaborative project built by a team of 6 executed
+                        in 5 days.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="SingleProjectContainer">
+                  <div class="ProjectHead">
+                    <p>
+                      <a style="color:black" href="https://regal-scone-4e45cf.netlify.app/"><span
+                          style="text-decoration: 1px solid underline">Beminimalist-clone</span></a>
+                      <span>(03/2022 - 02/2022)</span>
+                    </p>
+                    <a style="color:black" target="_blank" href="https://github.com/Saif-herry/beminimalist-clone"><i style="
+                          text-decoration: 2px solid underline;
+                          text-decoration-color: #559ca3;
+                          font-size:12px;
+                        " class="fa-brands fa-github" ></i></a>
+                  </div>
+                  <div class="ProjectInfoList">
+                    <ul class="ful">
+                      <li class="fli">
+                        An e-commerce website that provide Skin care products.
+                      </li>
+                      <li class="fli">
+                        Areas of responsibility:
+                        <ul class="sul">
+                          <li>Header and Footer</li>
+                          <li>complete Readme part of GitHub</li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        Tech Stack:
+                        <ul class="sul">
+                          <li>HTML | CSS | Advance JavaScript</li>
+                        </ul>
+                      </li>
+                      <li class="fli">
+                        A collaborative project built by team of 6 in 4 days.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- ////////////////////////////////////// -->
+          </div>
+        </div>
+        <!-- //////////////////////////////// -->
 
+        <div class="AllInfoRightSide">
+          <!-- /////////////////////TechSkills///////////////////////// -->
+          <div class="TechSkills">
+            <div class="educationHead">
+              <h1>TECH SKILLS</h1>
+            </div>
+            <div class="TechSkillsData">
+              <div class="frow">
+                <div>JavaScript</div>
+                <div>React</div>
+                <div>Redux</div>
+                <div>Express</div>
+              </div>
+              <div class="frow">
+                <div>MongoDB</div>
+                <div>Node.js</div>
+                <div>DSA</div>
+                <div>HTML</div>
+                <div>CSS</div>
+              </div>
+              <div class="frow">
+                <div>Fundamental of Computer Network</div>
+                <div>Chakra-UI</div>
+              </div>
+              <div class="frow">
+                <div>Algorithms</div>
+              </div>
+            </div>
+          </div>
+          <!-- /////////////////TechSkills end/////////////////// -->
+
+          <div class="softSkills">
+            <div class="educationHead">
+              <h1>SOFT SKILLS</h1>
+            </div>
+            <div class="softSkillsData">
+              <div>Team Work</div>
+              <div>Communication</div>
+              <div>Time Management</div>
+              <div>Listening Skill</div>
+              <div>Public Speaking</div>
+              <div>Work Ethic</div>
+            </div>
+          </div>
+          <!-- /////////////////softSkills end//////////////////////// -->
+
+
+          <div class="CERTIFICATIN">
+            <div class="educationHead">
+              <h1>CERTIFICATIN</h1>
+            </div>
+            <div class="CERTIFICATINDATA">
+              <div style="text-decoration: underline;">
+                <a style="color:black"
+                  href="https://drive.google.com/file/d/1fmz6o26nHArnW7IfwGWeUy0CTv_Pz-64/view?usp=share_link">
+                  Full-Stack Web Development, Masai</a>
+              </div>
+              <div style="margin-top: 5px;">(12/2021 - 07/2022)</div>
+            </div>
+          </div>
+          <!-- //////////////CERTIFICATIN end///////////////// -->
+
+          <div class="Langauge">
+            <div class="educationHead">
+              <h1>LANGUAGES</h1>
+            </div>
+            <div class="LangaugeData">
+              <div class="LangaugeName">
+                <p>English</p>
+                <i>Full Professional Proficiency</i>
+              </div>
+              <div class="LangaugeName">
+                <p>Hindi</p>
+                <i>Full Professional Proficiency</i>
+              </div>
+            </div>
+          </div>
+          <!-- ///////////////////Langauge end/////////////////////////// -->
+
+          <div class="interest">
+            <div class="educationHead">
+              <h1>INTERESTS</h1>
+            </div>
+            <div class="interestData">
+              <div class="interstInfo">
+                <div>Designing creative web pages </div>
+                <div>Travelling</div>
+              </div>
+              <div class="interstInfo">
+                <div>Reading</div>
+                <div> Listening to music </div>
+                <div>Cooking</div>
+              </div>
+            </div>
+          </div>
         </div>
 
+      </div>
+
     </div>
-    </div>
-    </div>
+
+  </div>
+  </div>
+  </div>
 </body>
 
 </html>
